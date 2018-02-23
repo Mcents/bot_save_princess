@@ -12,6 +12,6 @@ describe "Princess" do
   it "can find the location of the Princess" do
     princess = Princess.new(3,1,2,["---", "-m-", "--p"])
 
-    expect(princess.princess_location).to eq([2,2])
+    expect(princess.p_location).to eq([2,2])
   end
 end
