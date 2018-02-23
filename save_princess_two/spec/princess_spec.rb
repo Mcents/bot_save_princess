@@ -16,8 +16,8 @@ describe "Princess" do
   end
 
   it "can find the number of moves from Mario to Princess" do
-    princess = Princess.new(3,1,2,["---", "-m-", "--p"])
+    princess = Princess.new(3,1,1,["---", "-m-", "--p"])
 
-    expect(princess.moves_to_save_princess).to eq([-1,-2])
+    expect(princess.moves_to_save_princess).to eq([-1,-1])
   end
 end

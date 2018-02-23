@@ -16,4 +16,10 @@ class Princess
       end
     end
   end
+
+  def moves_to_save_princess
+    rows = m_location[0] - p_location[0]
+    columns = m_location[1] - p_location[1]
+    [rows, columns]
+  end
 end
