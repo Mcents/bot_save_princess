@@ -1,7 +1,7 @@
 require 'rspec'
 require_relative '../lib/princess'
 
-describe Princess do
+describe "Princess" do
   context "can initialize with proper data" do
     it "returns the grid" do
 
