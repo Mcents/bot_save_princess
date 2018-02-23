@@ -3,9 +3,9 @@ require_relative '../lib/princess'
 
 describe "Princess" do
   it "initializes with grid" do
-    princess = Princess.new(3,1,2,["---", "-m-", "--p"])
+    princess = Princess.new(3,1,2,["---", "--m", "--p"])
 
-    expect(princess.grid).to eq(["---", "-m-", "--p"])
+    expect(princess.grid).to eq(["---", "--m", "--p"])
     expect(princess.m_location).to eq([1,2])
   end
 
@@ -19,5 +19,11 @@ describe "Princess" do
     princess = Princess.new(3,1,1,["---", "-m-", "--p"])
 
     expect(princess.moves_to_save_princess).to eq([-1,-1])
+  end
+
+  it "can return the first step for saving the Princess" do
+    princess = Princess.new(3,1,2,["---", "-m-", "p--"])
+
+    expect(princess.create_steps_to_princess).to eq(["DOWN\n"])
   end
 end
