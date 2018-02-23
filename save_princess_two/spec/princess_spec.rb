@@ -14,4 +14,10 @@ describe "Princess" do
 
     expect(princess.p_location).to eq([2,2])
   end
+
+  it "can find the number of moves from Mario to Princess" do
+    princess = Princess.new(3,1,2,["---", "-m-", "--p"])
+
+    expect(princess.moves_to_save_princess).to eq([-1,-2])
+  end
 end
