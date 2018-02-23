@@ -21,7 +21,15 @@ describe "Princess" do
 
   it "can find the number of moves from Mario to Princess" do
     princess = Princess.new(3,["-p-", "m--", "---"])
+    princess.princess_and_mario_location
 
-    expect(princess.moves_to_save_princess).to eq([1,1])
+    expect(princess.moves_to_save_princess).to eq([1,-1])
+  end
+
+  it  "can find the number of moves from Mario to Princess with different locations" do
+    princess = Princess.new(3,["--m", "--", "-p-"])
+    princess.princess_and_mario_location
+
+    expect(princess.moves_to_save_princess).to eq([-2,1])
   end
 end
