@@ -38,4 +38,10 @@ describe "Princess" do
 
     expect(princess.create_first_step_to_princess).to eq("UP\n")
   end
+
+  it "can return steps with different locations and a bigger grid" do
+    princess = Princess.new(5,2,1,["---", "---", "-m-", "---", "p--"])
+
+    expect(princess.create_first_step_to_princess).to eq("DOWN\n")
+  end
 end
