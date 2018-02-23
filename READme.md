@@ -26,6 +26,8 @@ Running the file for Challenge 2
 ruby save_princess_two.rb
 ```
 
+## Running the tests
+
 Running the test for Challenge 1
 ```
 rspec save_princess
