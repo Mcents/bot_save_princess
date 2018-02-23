@@ -1,0 +1,3 @@
+class Princess
+
+end
