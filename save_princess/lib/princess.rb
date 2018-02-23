@@ -26,7 +26,6 @@ class Princess
   end
 
   def create_steps_to_princess(steps=[])
-    princess_and_mario_location
     rows, columns = moves_to_save_princess
     rows < 0 ? steps += ["DOWN\n"] * rows.abs :  steps += ["UP\n"] * rows.abs
     columns < 0 ? steps += ["RIGHT\n"] * columns.abs : steps += ["LEFT\n"] * columns.abs
