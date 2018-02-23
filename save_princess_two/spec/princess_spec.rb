@@ -26,4 +26,16 @@ describe "Princess" do
 
     expect(princess.create_first_step_to_princess).to eq("DOWN\n")
   end
+
+  it "can return the first step on the same row" do
+    princess = Princess.new(3,1,1,["---", "m-p", "---"])
+
+    expect(princess.create_first_step_to_princess).to eq("RIGHT\n")
+  end
+
+  it "can return the first step if Princess is Above Mario" do
+    princess = Princess.new(3,1,1,["p--", "m--", "---"])
+
+    expect(princess.create_first_step_to_princess).to eq("UP\n")
+  end
 end
