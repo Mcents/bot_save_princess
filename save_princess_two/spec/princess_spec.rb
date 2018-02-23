@@ -24,6 +24,6 @@ describe "Princess" do
   it "can return the first step for saving the Princess" do
     princess = Princess.new(3,1,2,["---", "-m-", "p--"])
 
-    expect(princess.create_steps_to_princess).to eq(["DOWN\n"])
+    expect(princess.create_first_step_to_princess).to eq("DOWN\n")
   end
 end

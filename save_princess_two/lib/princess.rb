@@ -22,4 +22,11 @@ class Princess
     columns = m_location[1] - p_location[1]
     [rows, columns]
   end
+
+  def create_first_step_to_princess(steps=[])
+    rows, columns = moves_to_save_princess
+    rows < 0 ? steps += ["DOWN\n"] * rows.abs :  steps += ["UP\n"] * rows.abs
+    columns < 0 ? steps += ["RIGHT\n"] * columns.abs : steps += ["LEFT\n"] * columns.abs
+    steps[0]
+  end
 end
